@@ -18,10 +18,35 @@
         <section id="register">
             <h2>Register</h2>
             <form id="registrationForm">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <input type="submit" value="Register">
+                <select id="role" class="form-field" required>
+                    <option value="" disabled selected>Select Role *</option>
+                    <option value="customer">Customer</option>
+                    <option value="vehicleSales">Vehicle Sales</option>
+                    <option value="insuranceSales">Insurance Sales</option>
+                </select>
+                <div class="error" id="roleError"></div>
+        
+                <input type="text" id="name" class="form-field" placeholder="Name *">
+                <div class="error" id="nameError"></div>
+        
+                <input type="email" id="email" class="form-field" placeholder="Email *">
+                <div class="error" id="emailError"></div>
+        
+                <input type="tel" id="phone" class="form-field" placeholder="Phone *">
+                <div class="error" id="phoneError"></div>
+        
+                <div id="staffNumberField" style="display: none;">
+                    <input type="text" id="staffNumber" class="form-field" placeholder="Staff Number *">
+                </div>
+                <div class="error" id="staffNumberError"></div>
+
+                <div>
+                <input type="checkbox" id="terms" class="checkbox-container">
+                    <span>Click this to agreee terms.<span>
+                </div>
+                <div class="error" id="termsError"></div>
+
+                <input type="submit" class="form-field" value="Register">
             </form>
         </section>
     </main>
@@ -29,6 +54,6 @@
         <p>&copy; 2024 Legend Motor Limited</p>
     </footer>
     <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/register.js"></script>
 </body>
 </html>
